@@ -11,14 +11,15 @@ mydb.commit()
 
 table = '''
 create table if not exists all_devices(
-item_no int, 
-item_id varchar(5), 
+item_no int  AUTO_INCREMENT, 
+item_id varchar(50), 
 Device varchar(50),
 Brand varchar(30),
 Model varchar(50),
 Quantity int,
 Price_per_unit varchar(30),
-MRP varchar(30))
+MRP varchar(30),
+primary key (item_no))
 '''
 cur.execute(table)
 mydb.commit()
@@ -26,9 +27,8 @@ mydb.commit()
 
 def add_devices(db_device):
     print('Enter the details :')
-    s = 'insert into all_devices (item_no, item_id, device, brand, model, quantity, price_per_unit, MRP)' \
-        'values(%s,%s,%s,%s,%s,%s,%s,%s) '
-    item_no = int(input('Enter Item no.: '))
+    s = 'insert into all_devices (item_id, device, brand, model, quantity, price_per_unit, MRP)' \
+        'values(%s,%s,%s,%s,%s,%s,%s) '
     item_id = input('Enter Item id: ')
     device = db_device
     brand = input('Enter Brand name: ')
@@ -36,7 +36,7 @@ def add_devices(db_device):
     quantity = int(input('Enter Quantity: '))
     price = input('Enter Price: ')
     mrp = input('Enter MRP: ')
-    value = (item_no, item_id, device, brand, model,
+    value = (item_id, device, brand, model,
              quantity, 'Rs.' + price, 'Rs.' + mrp)
     cur.execute(s, value)
     print('Successfully added')
@@ -61,7 +61,7 @@ def update(db_device):
     result = cur.fetchall()
     for rec in result:
         print(rec)
-    s = "update dish_washer set item_id= %s, brand= %s, model= %s, quantity= %s, price_per_unit= %s, " \
+    s = "update all_devices set item_id= %s, brand= %s, model= %s, quantity= %s, price_per_unit= %s, " \
         "MRP= %s where item_no= %s "
     item_no = int(input('Enter Item no.: '))
     item_id = input('Enter Item id: ')
