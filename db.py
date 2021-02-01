@@ -39,8 +39,8 @@ def add_devices(db_device):
     value = (item_id, device, brand, model,
              quantity, 'Rs.' + price, 'Rs.' + mrp)
     cur.execute(s, value)
-    print('Successfully added')
     mydb.commit()
+    print("Successfully updated!!!!!!!!")
 
 
 def delete():
@@ -74,7 +74,6 @@ def update(db_device):
     cur.execute(s, value)
     mydb.commit()
     print("Successfully updated!!!!!!!!")
-    input('Press ENTER to continue.....')
 
 
 def see_details():
