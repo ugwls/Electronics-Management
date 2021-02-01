@@ -41,7 +41,6 @@ def add_devices(db_device):
     cur.execute(s, value)
     print('Successfully added')
     mydb.commit()
-    input('Press ENTER to continue.....')
 
 
 def delete():
