@@ -29,7 +29,7 @@ def add_devices(db_device):
     print('Enter the details :')
     s = 'insert into all_devices (item_id, device, brand, model, quantity, price_per_unit, MRP)' \
         'values(%s,%s,%s,%s,%s,%s,%s) '
-    item_id = input('Enter Item id: ')
+    item_id = input('Enter Item id (abc001): ')
     device = db_device
     brand = input('Enter Brand name: ')
     model = input('Enter Model name: ')
