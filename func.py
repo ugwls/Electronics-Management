@@ -9,17 +9,20 @@ class func():
     def clear(self):
         return system('cls')
 
-    def end(self):
+    @staticmethod
+    def end():
         with open("font.txt", "r") as f:
             font = f.readlines()
             font = [x.strip('\n') for x in font]
         print(pyfiglet.figlet_format("Thank You", font=random.choice(font)))
 
+    @staticmethod
     def add_device(self):
         name = input('Enter device name: ')
         with open('devices.txt', "a") as f:
             f.write(f'{name}\n')
 
+    @staticmethod
     def add(self):
         with open("devices.txt", "r") as f:
             d = f.readlines()
@@ -52,6 +55,7 @@ class func():
                 input('Press Enter to continue...')
                 continue
 
+    @staticmethod
     def update(self):
         with open("devices.txt", "r") as f:
             d = f.readlines()
