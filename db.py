@@ -3,10 +3,10 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="Ujjw@l.16",
-    database="electronics")
+    passwd="Ujjw@l.16")
 cur = mydb.cursor()
 cur.execute('create database if not exists electronics')
+cur.execute('use electronics')
 mydb.commit()
 
 table = '''
