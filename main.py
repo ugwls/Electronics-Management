@@ -2,14 +2,16 @@ import db
 import add
 import update
 import random
-import pyfiglet
 from os import system
+
+system('pip install pyfiglet')
 
 
 def clear(): return system('cls')
 
 
 def end():
+    import pyfiglet
     with open("font.txt", "r") as f:
         font = f.readlines()
         font = [x.strip('\n') for x in font]
