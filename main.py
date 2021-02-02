@@ -1,32 +1,10 @@
 import db
-import add
-import update
-import random
-from os import system
-
-system('pip install pyfiglet')
-
-
-def clear(): return system('cls')
-
-
-def end():
-    import pyfiglet
-    with open("font.txt", "r") as f:
-        font = f.readlines()
-        font = [x.strip('\n') for x in font]
-    print(pyfiglet.figlet_format("Thank You", font=random.choice(font)))
-
-
-def add_device():
-    name = input('Enter device name: ')
-    with open('devices.txt', "a") as f:
-        f.write(f'{name}\n')
+from func import func
 
 
 k = True
 while k:
-    clear()
+    func.clear()
     print('\t\t\t\tMenu', end='')
     print('''
 1.Add Device in Database
@@ -38,33 +16,33 @@ while k:
         ''')
     menu = int(input('Enter your option(1/6): '))
     if menu <= 5:
-        clear()
+        func.clear()
         if menu == 1:
-            clear()
-            add_device()
-            clear()
+            func.clear()
+            func.add_device()
+            func.clear()
         elif menu == 2:
-            clear()
-            add.submenu()
-            clear()
+            func.clear()
+            func.add()
+            func.clear()
         elif menu == 3:
-            clear()
-            update.submenu()
-            clear()
+            func.clear()
+            func.update()
+            func.clear()
         elif menu == 4:
-            clear()
+            func.clear()
             db.delete()
-            clear()
+            func.clear()
         elif menu == 5:
-            clear()
+            func.clear()
             db.see_details()
-            clear()
+            func.clear()
     elif menu == 6:
-        clear()
-        end()
+        func.clear()
+        func.end()
         break
     else:
-        clear()
+        func.clear()
         print('Invalid Option...')
         input('Press Enter to continue...')
         continue
