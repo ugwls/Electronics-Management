@@ -16,13 +16,40 @@ class d():
         print(pyfiglet.figlet_format("Thank You", font=random.choice(font)))
 
     @staticmethod
-    def add_device():
+    def list_add():
         name = input('Enter device name: ')
         with open('devices.txt', "a") as f:
             f.write(f'{name}\n')
+        print('Device added successfully')
+        input('Press ENTER to continue...')
 
     @staticmethod
-    def add():
+    def list_see():
+        with open("devices.txt", "r") as f:
+            d = f.readlines()
+            d = [x.strip('\n') for x in d]
+            for i in d:
+                print(i)
+        input('Press ENTER to continue...')
+
+    @staticmethod
+    def list_delete():
+        with open("devices.txt", "r") as f:
+            d = f.readlines()
+            d = [x.strip('\n') for x in d]
+            for i in d:
+                print(i)
+        device = input('Enter device name to delete: ')
+        d.remove(device)
+        with open('devices.txt', "a") as f:
+            f.truncate(0)
+            for i in range(len(d)):
+                f.write(f'{d[i]}\n')
+        print('Device deleted successfully')
+        input('Press ENTER to continue...')
+
+    @staticmethod
+    def info_add():
         def clear(): return system('cls')
         with open("devices.txt", "r") as f:
             d = f.readlines()
@@ -61,7 +88,7 @@ class d():
                 continue
 
     @staticmethod
-    def update():
+    def info_update():
         def clear(): return system('cls')
         with open("devices.txt", "r") as f:
             d = f.readlines()
