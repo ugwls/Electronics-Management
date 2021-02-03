@@ -1,10 +1,10 @@
 import db
-from func import func
+from device import d
 
 
 k = True
 while k:
-    func.clear()
+    d.clear()
     print('\t\t\t\tMenu', end='')
     print('''
 1.Add Device in Database
@@ -16,33 +16,33 @@ while k:
         ''')
     menu = int(input('Enter your option(1/6): '))
     if menu <= 5:
-        func.clear()
+        d.clear()
         if menu == 1:
-            func.clear()
-            func.add_device()
-            func.clear()
+            d.clear()
+            d.add_device()
+            d.clear()
         elif menu == 2:
-            func.clear()
-            func.add()
-            func.clear()
+            d.clear()
+            d.add()
+            d.clear()
         elif menu == 3:
-            func.clear()
-            func.update()
-            func.clear()
+            d.clear()
+            d.update()
+            d.clear()
         elif menu == 4:
-            func.clear()
+            d.clear()
             db.delete()
-            func.clear()
+            d.clear()
         elif menu == 5:
-            func.clear()
+            d.clear()
             db.see_details()
-            func.clear()
+            d.clear()
     elif menu == 6:
-        func.clear()
-        func.end()
+        d.clear()
+        d.end()
         break
     else:
-        func.clear()
+        d.clear()
         print('Invalid Option...')
         input('Press Enter to continue...')
         continue

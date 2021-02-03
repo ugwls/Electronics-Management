@@ -3,7 +3,7 @@ import random
 from os import system
 
 
-class func():
+class d():
     @staticmethod
     def clear(): return system('cls')
 
