@@ -1,7 +1,6 @@
 import db
 import random
 from os import system
-system('pip install pyfiglet')
 
 
 class func():
@@ -46,7 +45,12 @@ class func():
                 for i in d_name:
                     if n == i:
                         db.add_devices(d_name[i])
-                        k = False
+                        a = input(
+                            'Do you want to add more record in (y/n): ').lower()
+                        if a == 'y':
+                            continue
+                        else:
+                            k = False
             elif n == l + 1:
                 clear()
                 break
@@ -80,7 +84,12 @@ class func():
                 for i in d_name:
                     if n == i:
                         db.update(d_name[i])
-                        k = False
+                        a = input(
+                            'Do you want to add more record in (y/n): ').lower()
+                        if a == 'y':
+                            continue
+                        else:
+                            k = False
             elif n == l + 1:
                 clear()
                 break
