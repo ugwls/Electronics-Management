@@ -15,7 +15,7 @@ while k:
 6.See Device list
 7.See Device Info
 8.Exit
-        ''')
+    ''')
     menu = int(input('Enter your option(1/8): '))
     if menu <= 7:
         d.clear()
