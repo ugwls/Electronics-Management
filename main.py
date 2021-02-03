@@ -1,4 +1,4 @@
-import db
+import device_db as db
 from device import d
 
 
