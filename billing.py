@@ -5,25 +5,21 @@ from os import system
 def clear(): return system('cls')
 
 
-def gen_bill():
-    pass
-
-
 def submenu():
     k = True
     while k:
         clear()
-        print('\t\t\t\tCustomer Management', end='')
+        print('\t\t\t\tBilling Management', end='')
         print('''
 1.Add Customer Info
 2.Update Customer Info
 3.Delete Customer Info
 4.See Customer Info
 5.Generate Bill
-5.Go To Main Page
+6.Go To Main Page
             ''')
-        menu = int(input('Enter your option(1/5): '))
-        if menu <= 4:
+        menu = int(input('Enter your option(1/6): '))
+        if menu <= 5:
             clear()
             if menu == 1:
                 clear()
@@ -41,7 +37,11 @@ def submenu():
                 clear()
                 db.see_details()
                 clear()
-        elif menu == 5:
+            elif menu == 5:
+                clear()
+                db.bill_gen()
+                clear()
+        elif menu == 6:
             clear()
             break
         else:
