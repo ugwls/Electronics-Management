@@ -1,0 +1,24 @@
+
+                        Bill
+XYZ Company
+Gurugram                                   INVOICE
+1200-800-444                                2021-02-04
+                                        78219
+------------------------------------------------------
+Bill To
+Contact Name: ds
+Phone: 123
+Address: qwer
+Email: 132dsf
+
+|    DESCRIPTION    |  QTY  |  UNIT PRICE  |  TOTAL  |
+('samsung', 'i7')      | 3 | 39999         | 119997|
+
+                                Subtotal:119997
+                                Discount: 20%
+                                Tax Rate: 18%
+                               Total Tax:21599.46
+                               -----------------------
+                             Balance Due:117597.06
+            
+                    
