@@ -8,14 +8,6 @@ class d():
     def clear(): return system('cls')
 
     @staticmethod
-    def end():
-        import pyfiglet
-        with open("font.txt", "r") as f:
-            font = f.readlines()
-            font = [x.strip('\n') for x in font]
-        print(pyfiglet.figlet_format("Thank You", font=random.choice(font)))
-
-    @staticmethod
     def list_add():
         name = input('Enter device name: ')
         with open('devices.txt', "a") as f:
