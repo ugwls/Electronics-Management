@@ -1,4 +1,5 @@
 import emp_main as emp
+import billing as b
 import device_main as device
 import pyfiglet as pf
 import random as r
@@ -38,6 +39,7 @@ while k == True:
             clear()
         elif menu == 3:
             clear()
+            b.submenu()
             clear()
     elif menu == 4:
         clear()

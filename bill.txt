@@ -1,0 +1,22 @@
+                        Bill
+XYZ Company
+Gurugram                                   INVOICE
+1200-800-444                                <Date>
+                                        <invoice no.>
+------------------------------------------------------
+Bill To
+Contact Name: <name>
+Address: <address>
+Phone: <phone>
+Email: <email>
+
+|    DESCRIPTION    |  QTY  |  UNIT PRICE  |  TOTAL  |
+
+
+                                Subtotal:<>
+                                Discount:<>
+                  subtotal less Discount:<>
+                                Tax Rate:<>
+                               Total Tax:<>
+                               -----------------------
+                             Balance Due:<>
